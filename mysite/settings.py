@@ -25,7 +25,7 @@ SECRET_KEY = '2x=0qo$^b-k(3h(43@@1io)@27xtkfn=&!s4+zd=hldq3=@6)3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', 'www.solffi.com']
 
 
 # Application definition
