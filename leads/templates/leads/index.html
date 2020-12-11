@@ -1,18 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Solffi</title>
-    <style>
-        b {font-size: 35px;}
-        strong {font-size: 60px; color: deeppink}
-        body {font-size: 23px; color: white; background-color: black}
-        hr {border: 1px solid deeppink; width: 155px; margin-left: 0}
-    </style>
-</head>
-<body>
-<b>Solffi<strong>.</strong>com</b>
-<hr>
-Préstamos online
-</body>
-</html>
+{% extends 'leads/base.html' %}
+{% load static %}
+{% block content %}
+<div class="box">
+    <!--
+    <div class="portrait">
+        <p>Únete al equipo de Camilo Romero</p>
+        <img class="img1" src="{% static 'myapp/camiloromero.jpg' %} ">
+    </div>
+    -->
+    <div class="registerform">
+    <p>Pide tu préstamo ya</p>
+        <form method="POST"> {% csrf_token %}
+    {{ ClienteForm.monto }}
+    <br><br>
+    {{ ClienteForm.nombre }}
+    <br><br>
+    {{ ClienteForm.email }}
+    <br><br>
+    {{ ClienteForm.whatsapp }}
+    <br><br>
+    {{ ClienteForm.ciudad }}
+    <p>
+    <input class="button" type="submit" value="Enviar">
+    </p>
+        </form>
+</div>
+</div>
+{% endblock %}
