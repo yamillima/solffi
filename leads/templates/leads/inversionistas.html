@@ -1,0 +1,29 @@
+{% extends 'leads/base.html' %}
+{% load static %}
+{% block content %}
+<div class="box">
+    <div class="portrait">
+        <p></p>
+        <img class="img1" src="{% static 'leads/family1.jpg' %} ">
+        <p></p>
+    </div>
+    <div class="registerform">
+    <p>¡Invierte y multiplica tu dinero!</p>
+        <form method="POST"> {% csrf_token %}
+    {{ InversionistaForm.monto }}
+    <br><br>
+    {{ InversionistaForm.nombre }}
+    <br><br>
+    {{ InversionistaForm.email }}
+    <br><br>
+    {{ InversionistaForm.whatsapp }}
+    <br><br>
+    {{ InversionistaForm.ciudad }}
+    <p>
+    <input class="button" type="submit" value="Enviar">
+    </p>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
