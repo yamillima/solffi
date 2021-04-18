@@ -4,14 +4,12 @@
 <div class="box">
     <div class="portrait">
         <p></p>
-        <img class="img1" src="{% static 'leads/family2.jpeg' %} ">
+        <img class="img1" src="{% static 'leads/respiraton.jpg' %} ">
         <p></p>
     </div>
     <div class="registerform">
-    <p>¡Pide tu préstamo ya!</p>
+    <p>¡Únete ya!</p>
         <form method="POST"> {% csrf_token %}
-    {{ ClienteForm.monto }}
-    <br><br>
     {{ ClienteForm.nombre }}
     <br><br>
     {{ ClienteForm.email }}
@@ -25,5 +23,9 @@
         </form>
     </div>
 </div>
+<h2>¡Gracias Respiratón 2021!</h2>
+<p>
+    AtmospherApp nació gracias a la Respiratón 2021. <br>Somos una aplicación web para cuidar el aire y salvar el planeta. <br>Al registrarte acumularás puntos por cumplir los retos y tareas encomendadas <br>en beneficio de la calidad del aire. Así que ayudarás a tu ciudad<br> mientras cuidas de ti y tu familia.
+</p>
 
 {% endblock %}
